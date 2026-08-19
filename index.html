@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesoría en Prepagas | Tu Salud Primero</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (Iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Propio -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Encabezado / Navegación -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-user-doctor"></i> Salud<span>Asesores</span>
+            </a>
+            
+            <!-- Botón Menú Hamburguesa para Celulares -->
+            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="nav-item">Inicio</a></li>
+                    <li><a href="#beneficios" class="nav-item">Beneficios</a></li>
+                    <li><a href="#nosotros" class="nav-item">Sobre Nosotros</a></li>
+                    <li><a href="#contacto" class="btn-nav nav-item">Consultar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Hero (Principal) -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <h1>Encontrá la cobertura médica ideal para vos y tu familia</h1>
+            <p>Comparamos más de 16 empresas prepagas para ofrecerte el plan que mejor se adapta a tus necesidades y presupuesto.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5491112345678?text=Hola,%20quisiera%20recibir%20asesoramiento%20sobre%20las%20prepagas" target="_blank" class="btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp
+                </a>
+                <a href="#contacto" class="btn btn-secondary">Dejar mis datos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Beneficios -->
+    <section id="beneficios" class="beneficios container">
+        <h2 class="section-title">¿Por qué asesorarte con nosotros?</h2>
+        <div class="cards-grid">
+            
+            <div class="card">
+                <i class="fa-solid fa-layer-group card-icon"></i>
+                <h3>+16 Prepagas</h3>
+                <p>Variedad de opciones y planes para que elijas sin atarte a una sola empresa.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-file-invoice-dollar card-icon"></i>
+                <h3>Descuento Monotributo / Recibo</h3>
+                <p>Aprovechá tus aportes de ley para derivar a la prepaga y pagar mucho menos.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-people-group card-icon"></i>
+                <h3>Grupo Familiar</h3>
+                <p>Sumá a tu cónyuge e hijos con coberturas integrales y descuentos por grupo.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-hand-holding-medical card-icon"></i>
+                <h3>Asesoramiento 100% Sin Cargo</h3>
+                <p>Te guiamos paso a paso en la cotización y el trámite de alta sin costos extra.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="nosotros" class="nosotros">
+        <div class="container nosotros-content">
+            <div class="nosotros-text">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos asesores especializados en el rubro de la salud privada. Nuestro objetivo es simplificar la búsqueda de tu cobertura médica, brindándote información clara, transparente y personalizada.</p>
+                <p>Nos encargamos de gestionar tu traspaso o alta de forma rápida para que vos y tu familia cuenten con la tranquilidad que merecen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Formulario de Contacto -->
+    <section id="contacto" class="contacto container">
+        <h2 class="section-title">Solicitá tu Cotización Personalizada</h2>
+        <form id="contact-form" class="form">
+            <div class="form-group">
+                <input type="text" id="nombre" placeholder="Nombre completo" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="telefono" placeholder="Teléfono / WhatsApp" required>
+            </div>
+            <div class="form-group">
+                <select id="tipo-ingreso" required>
+                    <option value="" disabled selected>Seleccioná tu condición</option>
+                    <option value="monotributo">Monotributista</option>
+                    <option value="dependencia">Relación de dependencia</option>
+                    <option value="particular">Particular / Particular autónomo</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Consulta</button>
+        </form>
+    </section>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/5491112345678?text=Hola,%20quiero%20cotizar%20un%20plan%20de%20salud" class="whatsapp-float" target="_blank" aria-label="Contacto por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 SaludAsesores - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Propio -->
+    <script src="script.js"></script>
+</body>
+</html>
