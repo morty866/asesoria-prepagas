@@ -20,25 +20,32 @@
 
     <!-- Encabezado / Navegación -->
     <header class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <i class="fa-solid fa-user-doctor"></i> Salud<span>Asesores</span>
-            </a>
-            
-            <!-- Botón Menú Hamburguesa para Celulares -->
+    <div class="container nav-container">
+        <a href="#" class="logo">
+            <i class="fa-solid fa-user-doctor"></i> Salud<span>Asesores</span>
+        </a>
+        
+        <div class="header-actions">
+            <!-- Botón Modo Oscuro -->
+            <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <!-- Botón Menú Hamburguesa -->
             <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
                 <i class="fa-solid fa-bars"></i>
             </button>
-
-            <nav class="nav-menu" id="nav-menu">
-                <ul class="nav-links">
-                    <li><a href="#inicio" class="nav-item">Inicio</a></li>
-                    <li><a href="#beneficios" class="nav-item">Beneficios</a></li>
-                    <li><a href="#nosotros" class="nav-item">Sobre Nosotros</a></li>
-                    <li><a href="#contacto" class="btn-nav nav-item">Consultar</a></li>
-                </ul>
-            </nav>
         </div>
+
+        <nav class="nav-menu" id="nav-menu">
+            <ul class="nav-links">
+                <li><a href="#inicio" class="nav-item">Inicio</a></li>
+                <li><a href="#beneficios" class="nav-item">Beneficios</a></li>
+                <li><a href="#nosotros" class="nav-item">Sobre Nosotros</a></li>
+                <li><a href="#contacto" class="btn-nav nav-item">Consultar</a></li>
+            </ul>
+        </nav>
+    </div>
     </header>
 
     <!-- Sección Hero (Principal) -->
@@ -131,6 +138,18 @@
             <p>&copy; 2026 SaludAsesores - Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <section id="beneficios" class="beneficios container js-scroll">
+    <!-- Contenido de beneficios -->
+    </section>
+
+    <section id="nosotros" class="nosotros js-scroll">
+    <!-- Contenido sobre nosotros -->
+    </section>
+
+    <section id="contacto" class="contacto container js-scroll">
+    <!-- Contenido de contacto -->
+    </section>
 
     <!-- JavaScript Propio -->
     <script src="script.js"></script>
