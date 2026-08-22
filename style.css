@@ -1,5 +1,5 @@
 /* ==========================================
-   VARIABLES Y MODO OSCURO
+   VARIABLES Y MODO OSCURO (PREDETERMINADO)
    ========================================== */
 :root {
     --primary-color: #0d6efd;
@@ -16,6 +16,7 @@
     --transition: all 0.3s ease;
 }
 
+/* Modo oscuro activado por defecto mediante la clase dark-mode */
 body.dark-mode {
     --bg-body: #121212;
     --bg-card: #1e1e1e;
@@ -230,7 +231,7 @@ body.dark-mode .theme-btn {
 }
 
 /* ==========================================
-   SECCIÓN PREPAGAS TRABAJADAS
+   SECCIÓN PREPAGAS TRABAJADAS (DISEÑO CHIPS)
    ========================================== */
 .prepagas-destacadas {
     padding: 4rem 0 2rem 0;
@@ -241,28 +242,34 @@ body.dark-mode .theme-btn {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.2rem;
-    margin-top: 1.5rem;
+    align-items: center;
+    gap: 1rem;
+    max-width: 900px;
+    margin: 1.5rem auto 0 auto;
 }
 
 .prepaga-badge {
     background-color: var(--bg-card);
-    border: 2px solid var(--border-color);
+    border: 1px solid var(--border-color);
     color: var(--text-color);
     font-weight: 600;
-    font-size: 1.05rem;
-    padding: 14px 28px;
-    border-radius: 50px;
-    box-shadow: 0 4px 12px var(--shadow);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 0.95rem;
+    padding: 10px 22px;
+    border-radius: 25px;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: all 0.3s ease;
     cursor: default;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
 }
 
 .prepaga-badge:hover {
-    transform: translateY(-5px) scale(1.03);
+    transform: translateY(-3px);
     border-color: var(--primary-color);
     color: var(--primary-color);
-    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.15);
+    box-shadow: 0 6px 16px rgba(13, 110, 253, 0.2);
 }
 
 .mas-prepagas {
@@ -274,6 +281,16 @@ body.dark-mode .theme-btn {
 .mas-prepagas:hover {
     background-color: var(--primary-dark);
     color: #ffffff;
+}
+
+body.dark-mode .prepaga-badge {
+    background-color: #242424;
+    border-color: #383838;
+}
+
+body.dark-mode .prepaga-badge:hover {
+    background-color: #2c2c2c;
+    border-color: var(--primary-color);
 }
 
 /* ==========================================
@@ -341,7 +358,7 @@ body.dark-mode .theme-btn {
 }
 
 /* ==========================================
-   FORMULARIO Y CAMPO DE TEXTO (TEXTAREA)
+   FORMULARIO Y CAMPO LIBRE (TEXTAREA)
    ========================================== */
 .contacto {
     padding: 5rem 0;
@@ -386,7 +403,7 @@ body.dark-mode .theme-btn {
 .form-group select:focus,
 .form-group textarea:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(13,110,253,0.15);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
 }
 
 /* ==========================================
@@ -403,7 +420,7 @@ body.dark-mode .theme-btn {
     border-radius: 50px;
     text-align: center;
     font-size: 32px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     display: flex;
     align-items: center;

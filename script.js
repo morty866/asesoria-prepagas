@@ -32,32 +32,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. MODO OSCURO (DARK MODE)
-    const themeToggleBtn = document.getElementById('theme-toggle');
+ // 2. MODO OSCURO (DARK MODE - PREDETERMINADO)
+const themeToggleBtn = document.getElementById('theme-toggle');
 
-    // Cargar preferencia del localStorage al iniciar
-    if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-        if (themeToggleBtn) {
-            themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
-        }
-    }
-
+// Si no hay preferencia guardada o la preferencia es 'dark', se activa el modo oscuro
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark' || !savedTheme) {
+    document.body.classList.add('dark-mode');
     if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            
-            // Cambiar el ícono entre Sol y Luna
-            themeToggleBtn.innerHTML = isDarkMode 
-                ? '<i class="fa-solid fa-sun"></i>' 
-                : '<i class="fa-solid fa-moon"></i>';
-                
-            // Guardar en el almacenamiento del navegador
-            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-        });
+        themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
     }
+} else {
+    document.body.classList.remove('dark-mode');
+    if (themeToggleBtn) {
+        themeToggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    }
+}
 
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        
+        // Cambiar el ícono entre Sol y Luna
+        themeToggleBtn.innerHTML = isDarkMode 
+            ? '<i class="fa-solid fa-sun"></i>' 
+            : '<i class="fa-solid fa-moon"></i>';
+            
+        // Guardar preferencia del usuario
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    });
+    }
     // 3. ANIMACIONES SCROLL CON EFECTO ESCALONADO
     const scrollElements = document.querySelectorAll('.js-scroll');
 
