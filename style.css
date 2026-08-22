@@ -20,7 +20,7 @@
 body.dark-mode {
     --bg-body: #121212;
     --bg-card: #1e1e1e;
-    --bg-light: #181818;
+    --bg-light: #121212; /* Ajustado al mismo color de body para evitar cambios de tono */
     --text-color: #f1f5f9;
     --text-muted: #94a3b8;
     --border-color: #334155;
@@ -243,7 +243,6 @@ body.dark-mode .theme-btn {
     gap: 1rem;
 }
 
-/* Tarjeta de Formulario dentro del Hero */
 .hero-form-card {
     flex: 1 1 380px;
     background-color: var(--bg-card);
@@ -436,7 +435,6 @@ body.dark-mode .prepaga-badge:hover {
     margin-bottom: 1.2rem;
 }
 
-/* Marco especial para el logo (soporta logos con fondo oscuro o transparente en dark mode) */
 .brand-logo {
     max-width: 100%;
     height: 60px;
@@ -469,7 +467,6 @@ body.dark-mode .brand-logo {
     border-radius: 20px;
 }
 
-/* Acordeón para la lista de planes */
 .plans-accordion {
     border-top: 1px solid var(--border-color);
     padding-top: 1rem;
@@ -733,6 +730,111 @@ body.dark-mode .brand-logo {
 }
 
 /* ==========================================
+   EFECTO 4: PRUEBA SOCIAL (SOCIAL TOAST)
+   ========================================== */
+.social-toast {
+    position: fixed;
+    bottom: 25px;
+    left: -350px; /* Escondido a la izquierda */
+    background-color: var(--bg-card);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--primary-color);
+    padding: 12px 16px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 24px var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 998;
+    max-width: 320px;
+    transition: left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-toast.show {
+    left: 25px;
+}
+
+.toast-icon {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+}
+
+.toast-content p {
+    font-size: 0.85rem;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.toast-time {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 0 4px;
+}
+
+.toast-close:hover {
+    color: var(--text-color);
+}
+
+/* ==========================================
+   EFECTO 6: GLOBO DE DIÁLOGO DE WHATSAPP (TOOLTIP)
+   ========================================== */
+.wa-tooltip {
+    position: fixed;
+    bottom: 95px;
+    right: 25px;
+    background-color: var(--bg-card);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 10px 14px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px var(--shadow);
+    font-size: 0.85rem;
+    font-weight: 500;
+    max-width: 220px;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.wa-tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    right: 22px;
+    border-width: 8px 8px 0 8px;
+    border-style: solid;
+    border-color: var(--bg-card) transparent transparent transparent;
+}
+
+.wa-tooltip.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.wa-tooltip-close {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+/* ==========================================
    FOOTER
    ========================================== */
 footer {
@@ -758,7 +860,7 @@ footer {
 }
 
 /* ==========================================
-   RESPONSIVE Y MENÚ HAMBURGUESA
+   RESPONSIVE Y MEDIA QUERIES
    ========================================== */
 @media (max-width: 900px) {
     .hero-container {
@@ -819,10 +921,15 @@ footer {
     .requirements-grid {
         grid-template-columns: 1fr;
     }
+
+    .social-toast {
+        bottom: 95px;
+        max-width: 280px;
+    }
 }
 
 @media (min-width: 769px) {
     .menu-toggle {
         display: none;
     }
-}   
+}
