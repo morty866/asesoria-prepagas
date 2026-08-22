@@ -217,15 +217,62 @@ body {
 }
 
 /* ==========================================
-   BENEFICIOS (CARDS)
+   SECCIÓN PREPAGAS TRABAJADAS (MEJORADO)
+   ========================================== */
+.prepagas-destacadas {
+    padding: 4rem 0 2rem 0;
+    text-align: center;
+}
+
+.prepagas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.prepaga-badge {
+    background-color: var(--bg-card);
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 14px 28px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+}
+
+.prepaga-badge:hover {
+    transform: translateY(-5px) scale(1.03);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.15);
+}
+
+.mas-prepagas {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.mas-prepagas:hover {
+    background-color: var(--primary-dark);
+    color: #ffffff;
+}
+
+/* ==========================================
+   BENEFICIOS / TE OFRECEMOS (CARDS & GRID FIX)
    ========================================== */
 .beneficios {
-    padding: 5rem 0;
+    padding: 4rem 0;
 }
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 2rem;
 }
 
@@ -233,25 +280,28 @@ body {
     background-color: var(--bg-card) !important;
     border: 1px solid var(--border-color) !important;
     border-radius: var(--border-radius);
-    padding: 2rem;
+    padding: 2.5rem 1.5rem;
     text-align: center;
-    transition: var(--transition);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px var(--shadow);
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px var(--shadow);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px var(--shadow);
 }
 
 .card-icon {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    display: inline-block;
 }
 
 .card h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.25rem;
+    color: var(--text-color);
 }
 
 .card p {
@@ -358,7 +408,7 @@ footer {
 }
 
 /* ==========================================
-   ANIMACIONES SCROLL
+   ANIMACIONES SCROLL (Efectos JS)
    ========================================== */
 .js-scroll {
     opacity: 0;
