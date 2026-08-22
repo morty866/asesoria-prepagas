@@ -341,7 +341,7 @@ body.dark-mode .theme-btn {
 }
 
 /* ==========================================
-   FORMULARIO
+   FORMULARIO Y CAMPO DE TEXTO (TEXTAREA)
    ========================================== */
 .contacto {
     padding: 5rem 0;
@@ -363,7 +363,8 @@ body.dark-mode .theme-btn {
 }
 
 .form-group input,
-.form-group select {
+.form-group select,
+.form-group textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid var(--border-color);
@@ -376,8 +377,14 @@ body.dark-mode .theme-btn {
     transition: var(--transition);
 }
 
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
 .form-group input:focus,
-.form-group select:focus {
+.form-group select:focus,
+.form-group textarea:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(13,110,253,0.15);
 }
