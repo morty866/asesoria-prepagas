@@ -1,5 +1,5 @@
 /* ==========================================
-   VARIABLES Y MODO OSCURO (PREDETERMINADO)
+   VARIABLES Y MODO OSCURO
    ========================================== */
 :root {
     --primary-color: #0d6efd;
@@ -16,7 +16,7 @@
     --transition: all 0.3s ease;
 }
 
-/* Modo oscuro activado por defecto mediante la clase dark-mode */
+/* Modo oscuro activado mediante la clase dark-mode */
 body.dark-mode {
     --bg-body: #121212;
     --bg-card: #1e1e1e;
@@ -50,16 +50,22 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
 .section-title {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 2rem;
     color: var(--primary-color);
-    margin: 20px;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
 }
 
 /* ==========================================
@@ -116,7 +122,6 @@ body {
     color: var(--primary-color);
 }
 
-/* Botón Modo Oscuro Estilizado */
 .theme-btn {
     background-color: var(--bg-light);
     border: 1px solid var(--border-color);
@@ -156,6 +161,7 @@ body.dark-mode .theme-btn {
     border: none;
     cursor: pointer;
     transition: var(--transition);
+    text-align: center;
 }
 
 .btn-whatsapp {
@@ -197,38 +203,91 @@ body.dark-mode .theme-btn {
 }
 
 /* ==========================================
-   HERO
+   HERO CON FORMULARIO INTEGRADO
    ========================================== */
 .hero {
-    background: linear-gradient(135deg, rgba(13,110,253,0.9), rgba(25,135,84,0.8)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.92), rgba(25, 135, 84, 0.85)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
     color: #ffffff;
-    padding: 5rem 0;
-    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    flex-wrap: wrap;
 }
 
 .hero-content {
-    max-width: 800px;
+    flex: 1 1 450px;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
+.hero-content h1 {
+    font-size: 2.4rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    line-height: 1.25;
+    margin-bottom: 1.2rem;
 }
 
-.hero p {
-    font-size: 1.2rem;
+.hero-content p {
+    font-size: 1.15rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 .hero-buttons {
     display: flex;
-    justify-content: center;
     gap: 1rem;
-    flex-wrap: wrap;
+}
+
+/* Tarjeta de Formulario dentro del Hero */
+.hero-form-card {
+    flex: 1 1 380px;
+    background-color: var(--bg-card);
+    color: var(--text-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--border-color);
+}
+
+.hero-form-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.3rem;
+    color: var(--primary-color);
+}
+
+.hero-form-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+}
+
+.lead-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.lead-form input,
+.lead-form select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-body);
+    color: var(--text-color);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.lead-form input:focus,
+.lead-form select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
 }
 
 /* ==========================================
@@ -295,10 +354,241 @@ body.dark-mode .prepaga-badge:hover {
 }
 
 /* ==========================================
+   SECCIÓN: MÉTODO DE TRABAJO (4 PASOS)
+   ========================================== */
+.process-section {
+    padding: 5rem 0;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.8rem;
+}
+
+.process-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: var(--transition);
+    position: relative;
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.step-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    line-height: 1;
+}
+
+.process-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    color: var(--text-color);
+}
+
+.process-card p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   SECCIÓN: CATÁLOGO DE COBERTURAS (CARTAS)
+   ========================================== */
+.catalog-section {
+    padding: 5rem 0;
+    background-color: var(--bg-light);
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.brand-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.8rem;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brand-card:hover {
+    box-shadow: 0 8px 24px var(--shadow);
+    transform: translateY(-4px);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+/* Marco especial para el logo (soporta logos con fondo oscuro o transparente en dark mode) */
+.brand-logo {
+    max-width: 100%;
+    height: 60px;
+    object-fit: contain;
+    margin: 0 auto 0.8rem auto;
+    display: block;
+    background-color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .brand-logo {
+    background-color: #ffffff;
+}
+
+.brand-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+}
+
+.badge {
+    display: inline-block;
+    background-color: rgba(13, 110, 253, 0.1);
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+/* Acordeón para la lista de planes */
+.plans-accordion {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+}
+
+.plans-accordion summary {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    transition: var(--transition);
+}
+
+.plans-accordion summary:hover {
+    opacity: 0.85;
+}
+
+.plans-list {
+    list-style: none;
+    margin-top: 0.8rem;
+    padding-left: 0;
+}
+
+.plans-list li {
+    padding: 6px 0;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.plans-list li:last-child {
+    border-bottom: none;
+}
+
+.plans-list li::before {
+    content: "✓ ";
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* ==========================================
+   SECCIÓN: REQUISITOS SEGÚN PERFIL
+   ========================================== */
+.requirements-section {
+    padding: 5rem 0;
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.req-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2.2rem 1.8rem;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: var(--transition);
+}
+
+.req-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.req-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+.req-card h3 {
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+.req-tag {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.2rem;
+}
+
+.check-list {
+    list-style: none;
+}
+
+.check-list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 0.8rem;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+}
+
+.check-list li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+}
+
+/* ==========================================
    BENEFICIOS / TE OFRECEMOS
    ========================================== */
 .beneficios {
-    padding: 4rem 0;
+    padding: 5rem 0;
+    background-color: var(--bg-light);
 }
 
 .cards-grid {
@@ -344,10 +634,15 @@ body.dark-mode .prepaga-badge:hover {
    NOSOTROS
    ========================================== */
 .nosotros {
-    background-color: var(--bg-light);
-    padding: 4rem 0;
+    padding: 5rem 0;
     text-align: center;
     transition: background-color 0.3s ease;
+}
+
+.nosotros-text h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
 }
 
 .nosotros-text p {
@@ -356,21 +651,23 @@ body.dark-mode .prepaga-badge:hover {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 1.05rem;
 }
 
 /* ==========================================
-   FORMULARIO Y CAMPO LIBRE (TEXTAREA)
+   FORMULARIO DE CONTACTO SECUNDARIO
    ========================================== */
 .contacto {
     padding: 5rem 0;
+    background-color: var(--bg-light);
 }
 
 .form {
-    max-width: 500px;
+    max-width: 550px;
     margin: 0 auto;
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
-    padding: 2rem;
+    padding: 2.5rem 2rem;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 15px var(--shadow);
     transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -384,13 +681,13 @@ body.dark-mode .prepaga-badge:hover {
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 12px;
+    padding: 12px 14px;
     border: 1px solid var(--border-color);
     background-color: var(--bg-body);
     color: var(--text-color);
     border-radius: 8px;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: 0.95rem;
     outline: none;
     transition: var(--transition);
 }
@@ -442,7 +739,7 @@ footer {
     background-color: #111827;
     color: #ffffff;
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 1.8rem 0;
     font-size: 0.9rem;
 }
 
@@ -463,6 +760,25 @@ footer {
 /* ==========================================
    RESPONSIVE Y MENÚ HAMBURGUESA
    ========================================== */
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-form-card {
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -497,15 +813,10 @@ footer {
         text-align: center;
     }
 
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .cards-grid {
+    .cards-grid,
+    .process-grid,
+    .catalog-grid,
+    .requirements-grid {
         grid-template-columns: 1fr;
     }
 }

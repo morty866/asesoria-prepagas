@@ -40,7 +40,9 @@
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-links">
                     <li><a href="#inicio" class="nav-item">Inicio</a></li>
-                    <li><a href="#Coberturas medicas" class="nav-item">Coberturas medicas</li>
+                    <li><a href="#coberturas" class="nav-item">Coberturas médicas</a></li>
+                    <li><a href="#metodo" class="nav-item">Método</a></li>
+                    <li><a href="#requisitos" class="nav-item">Requisitos</a></li>
                     <li><a href="#beneficios" class="nav-item">Beneficios</a></li>
                     <li><a href="#nosotros" class="nav-item">Sobre Nosotros</a></li>
                     <li><a href="#contacto" class="btn-nav nav-item">Consultar</a></li>
@@ -49,37 +51,472 @@
         </div>
     </header>
 
-    <!-- Sección Hero (Principal) -->
+    <!-- 2. SECCIÓN HERO CON FORMULARIO INTEGRADO (CAPTACIÓN DIRECTA) -->
     <section id="inicio" class="hero">
-        <div class="container hero-content">
-            <h1>Encontrá la cobertura médica ideal para vos y tu familia</h1>
-            <p>Contamos con 12 coberturas medicas. <strong>Planes desde $50.000</strong> adaptados a tus necesidades y presupuesto.</p>
-            <div class="hero-buttons">
-                <a href="https://wa.me/5491137981939?text=Hola,%20quisiera%20recibir%20asesoramiento%20sobre%20los%20planes%20de%20coberturas%20medicas" target="_blank" class="btn btn-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp
-                </a>
-                <a href="#contacto" class="btn btn-secondary">Dejar mis datos</a>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Encontrá la cobertura médica ideal para vos y tu familia</h1>
+                <p>Contamos con más de 15 coberturas médicas. <strong>Planes desde $50.000</strong> adaptados a tus necesidades y presupuesto.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5491137981939?text=Hola,%20quisiera%20recibir%20asesoramiento%20sobre%20los%20planes%20de%20coberturas%20medicas" target="_blank" class="btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Formulario directo -->
+            <div class="hero-form-card">
+                <h3>Recibí asesoramiento en minutos</h3>
+                <p>Completá tus datos y un asesor se comunicará con vos.</p>
+                <form action="https://formspree.io/f/xrpzdkrg" method="POST" class="lead-form">
+                    <div class="form-group">
+                        <input type="text" name="nombre" placeholder="Nombre y Apellido" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="provincia" required>
+                            <option value="" disabled selected>Provincia</option>
+                            <option value="Buenos Aires">Buenos Aires</option>
+                            <option value="CABA">CABA</option>
+                            <option value="Catamarca">Catamarca</option>
+                            <option value="Chaco">Chaco</option>
+                            <option value="Chubut">Chubut</option>
+                            <option value="Córdoba">Córdoba</option>
+                            <option value="Corrientes">Corrientes</option>
+                            <option value="Entre Ríos">Entre Ríos</option>
+                            <option value="Formosa">Formosa</option>
+                            <option value="Jujuy">Jujuy</option>
+                            <option value="La Pampa">La Pampa</option>
+                            <option value="La Rioja">La Rioja</option>
+                            <option value="Mendoza">Mendoza</option>
+                            <option value="Misiones">Misiones</option>
+                            <option value="Neuquén">Neuquén</option>
+                            <option value="Río Negro">Río Negro</option>
+                            <option value="Salta">Salta</option>
+                            <option value="San Juan">San Juan</option>
+                            <option value="San Luis">San Luis</option>
+                            <option value="Santa Cruz">Santa Cruz</option>
+                            <option value="Santa Fe">Santa Fe</option>
+                            <option value="Santiago del Estero">Santiago del Estero</option>
+                            <option value="Tierra del Fuego">Tierra del Fuego</option>
+                            <option value="Tucumán">Tucumán</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select name="cobertura_interes" required>
+                            <option value="" disabled selected>Cobertura de interés</option>
+                            <option value="Todas / Quiero comparar">Todas / Quiero comparar</option>
+                            <option value="Avalian">Avalian</option>
+                            <option value="Contigo Salud">Contigo Salud</option>
+                            <option value="Doctored">Doctored</option>
+                            <option value="Galeno">Galeno</option>
+                            <option value="Hominis">Hominis</option>
+                            <option value="Hospital Británico">Hospital Británico</option>
+                            <option value="Medicenter">Medicenter</option>
+                            <option value="Medicus">Medicus</option>
+                            <option value="Medifé">Medifé</option>
+                            <option value="MePLife Salud">MePLife Salud</option>
+                            <option value="Omint">Omint</option>
+                            <option value="Ospoce">Ospoce</option>
+                            <option value="Premedic">Premedic</option>
+                            <option value="Prevención Salud">Prevención Salud</option>
+                            <option value="Salud Central">Salud Central</option>
+                            <option value="Sancor Salud">Sancor Salud</option>
+                            <option value="Swiss Medical">Swiss Medical</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Solicitar asesoramiento gratis</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Sección Marcas Destacadas -->
-    <section id="Coberturas medicas" class="Coberturas medicas-destacadas container js-scroll">
-        <h2 class="section-title">Trabajamos con las mejores coberturas medicas</h2>
-        <div class="Coberturas medicas-grid">
-            <div class="prepaga-badge">Sancor Salud</div>
-            <div class="prepaga-badge">Avalian</div>
-            <div class="prepaga-badge">Prevención Salud</div>
-            <div class="prepaga-badge">Swiss Medical</div>
-            <div class="prepaga-badge">Galeno</div>
-            <div class="prepaga-badge">Medifé</div>
-            <div class="prepaga-badge mas-Coberturas medicas">+ Y muchas más</div>
+    <!-- 3. SECCIÓN NUESTRO MÉTODO DE TRABAJO (4 PASOS) -->
+    <section id="metodo" class="process-section container js-scroll">
+        <h2 class="section-title">Nuestro Método de Trabajo</h2>
+        <p class="section-subtitle">Una experiencia simple, clara y transparente de principio a fin.</p>
+
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="step-number">01</div>
+                <h4>Diagnóstico</h4>
+                <p>Relevamos edad, localidad, grupo familiar y situación laboral para entender qué necesitás.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="step-number">02</div>
+                <h4>Comparación</h4>
+                <p>Evaluamos cartillas, clínicas, beneficios y costos entre más de 15 prepagas líderes.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="step-number">03</div>
+                <h4>Recomendación</h4>
+                <p>Te presentamos las opciones más convenientes explicadas de manera sencilla y sin vueltas.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="step-number">04</div>
+                <h4>Alta y Gestión</h4>
+                <p>Te guiamos paso a paso con los formularios y la documentación para que el alta sea rápida.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. SECCIÓN CATALOGO CON CARTAS INTERACTIVAS (MEDICINA PRIVADA EN TODAS) -->
+    <section id="coberturas" class="catalog-section container js-scroll">
+        <h2 class="section-title">Coberturas Médicas con las que Trabajamos</h2>
+        <p class="section-subtitle">Hacé clic en cada opción para desplegar los planes disponibles.</p>
+
+        <div class="catalog-grid">
+
+            <!-- Avalian -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/ospaca_prestadores-medicos_logo-avalian.png" alt="Avalian" class="brand-logo" />
+                    <h3>Avalian</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>AS 100 CERCA</li>
+                        <li>AS 200 INTEGRAL</li>
+                        <li>AS 300 SUPERIOR</li>
+                        <li>AS 400 SELECTA</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Contigo Salud -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/Contigo-Salud.jpg" alt="Contigo Salud" class="brand-logo" />
+                    <h3>Contigo Salud</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>Plan Esencial +</li>
+                        <li>Plan Estándar</li>
+                        <li>Plan Preferencial</li>
+                        <li>Plan Premium</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Doctored -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/Doctored.png" alt="Doctored" class="brand-logo" />
+                    <h3>Doctored</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>Planes Individuales</li>
+                        <li>Planes Familiares</li>
+                        <li>Planes Corporativos</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Galeno -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/galeno.png" alt="Galeno" class="brand-logo" />
+                    <h3>Galeno</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>Plan 220</li>
+                        <li>Plan 330</li>
+                        <li>Plan 440</li>
+                        <li>Plan 550</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Hominis -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/hominis.png" alt="Hominis" class="brand-logo" />
+                    <h3>Hominis</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>Aqua Mas</li>
+                        <li>Vita Mas</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Hospital Británico -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/Hospital-britanico.png" alt="Hospital Británico" class="brand-logo" />
+                    <h3>Hospital Británico</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>Plan Classic Pluss</li>
+                        <li>Plan Premium Plus</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Medicenter -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/medicenter.jpg" alt="Medicenter" class="brand-logo" />
+                    <h3>Medicenter</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>Gama 10 Junior</li>
+                        <li>Gama 20 / 30 / 40</li>
+                        <li>Plan Blanco</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Medicus -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/medicus.png" alt="Medicus" class="brand-logo" />
+                    <h3>Medicus</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>Integra</li>
+                        <li>Family</li>
+                        <li>Celeste</li>
+                        <li>Azul</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Medifé -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/medife.png" alt="Medifé" class="brand-logo" />
+                    <h3>Medifé</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>Plan Bronce</li>
+                        <li>Plan Plata</li>
+                        <li>Plan Oro</li>
+                        <li>Plan Platinum</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- MePLife Salud -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/meplife.png" alt="MePLife Salud" class="brand-logo" />
+                    <h3>MePLife Salud</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>Plan Álamo</li>
+                        <li>Plan Roble</li>
+                        <li>Plan Lapacho</li>
+                        <li>Plan Ceibo</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Omint -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/ominit.jpg" alt="Omint" class="brand-logo" />
+                    <h3>Omint</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>Génesis</li>
+                        <li>Clásico</li>
+                        <li>Global</li>
+                        <li>Premium</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Ospoce -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/ospoce.jpg" alt="Ospoce" class="brand-logo" />
+                    <h3>Ospoce</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>Planes con derivación de aportes</li>
+                        <li>Planes directos</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Premedic -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/premedic.jpg" alt="Premedic" class="brand-logo" />
+                    <h3>Premedic</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>Cien</li>
+                        <li>200 / 300 / 400 / 500</li>
+                        <li>Plan Simple</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Prevención Salud -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/Prevención-salud.png" alt="Prevención Salud" class="brand-logo" />
+                    <h3>Prevención Salud</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>A1 / A2 / A4 / A5</li>
+                        <li>Línea ION</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Salud Central -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/saludcentral.png" alt="Salud Central" class="brand-logo" />
+                    <h3>Salud Central</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>SC 30 / SC 50</li>
+                        <li>SC 70 / SC 90 / SC 110</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Sancor Salud -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/sancorsalud.webp" alt="Sancor Salud" class="brand-logo" />
+                    <h3>Sancor Salud</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>Plan 1000 / 1500</li>
+                        <li>Plan 3000 / 4000</li>
+                        <li>Plan 5000 / 6000</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Swiss Medical -->
+            <div class="brand-card">
+                <div class="card-header">
+                    <img src="/imagenes/Logos/swissmedical.webp" alt="Swiss Medical" class="brand-logo" />
+                    <h3>Swiss Medical</h3>
+                    <span class="badge">Medicina Privada</span>
+                </div>
+                <details class="plans-accordion">
+                    <summary>Ver planes disponibles</summary>
+                    <ul class="plans-list">
+                        <li>S1 / S2</li>
+                        <li>SMG02 / SMG20</li>
+                        <li>SMG30 / SMG40</li>
+                    </ul>
+                </details>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. SECCIÓN SEGMENTACIÓN POR PERFIL / REQUISITOS -->
+    <section id="requisitos" class="requirements-section container js-scroll">
+        <h2 class="section-title">Requisitos según tu Perfil</h2>
+        <p class="section-subtitle">Organizamos la documentación para que la gestión sea clara y sin vueltas.</p>
+
+        <div class="requirements-grid">
+            
+            <div class="req-card">
+                <div class="req-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h3>Relación de Dependencia</h3>
+                <p class="req-tag">Derivación de aportes</p>
+                <ul class="check-list">
+                    <li>DNI frente y dorso</li>
+                    <li>Último recibo de sueldo</li>
+                    <li>Clave Fiscal (Nivel 3)</li>
+                    <li>CBU o datos de tarjeta</li>
+                    <li>Documentación del grupo familiar</li>
+                </ul>
+            </div>
+
+            <div class="req-card">
+                <div class="req-icon"><i class="fa-solid fa-file-signature"></i></div>
+                <h3>Monotributistas</h3>
+                <p class="req-tag">Aportes del monotributo</p>
+                <ul class="check-list">
+                    <li>DNI frente y dorso</li>
+                    <li>Formulario 184 (AFIP)</li>
+                    <li>Formulario 152 / Constancia de opción</li>
+                    <li>Últimos 3 comprobantes de pago</li>
+                    <li>Clave Fiscal</li>
+                </ul>
+            </div>
+
+            <div class="req-card">
+                <div class="req-icon"><i class="fa-solid fa-user"></i></div>
+                <h3>Autónomos / Particulares</h3>
+                <p class="req-tag">Ingreso directo / Particular</p>
+                <ul class="check-list">
+                    <li>DNI frente y dorso</li>
+                    <li>CBU para débito o tarjeta de crédito</li>
+                    <li>Declaración jurada de salud</li>
+                    <li>Datos de contacto completos</li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
     <!-- Sección Te Ofrecemos (Beneficios Destacados) -->
     <section id="beneficios" class="beneficios container js-scroll">
-        <h2 class="section-title">Te ofrecemos</h2>
+        <h2 class="section-title">Te Ofrecemos</h2>
         <div class="cards-grid">
             
             <div class="card">
@@ -120,32 +557,31 @@
         </div>
     </section>
 
-   <!-- Sección Formulario de Contacto -->
-<section id="contacto" class="contacto container js-scroll">
-    <h2 class="section-title">Solicitá tu Cotización Personalizada</h2>
-    
-    <!-- Se agrega action y method para Formspree -->
-    <form id="contact-form" class="form" action="https://formspree.io/f/xrpzdkrg" method="POST">
-        <div class="form-group">
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" required>
-        </div>
-        <div class="form-group">
-            <input type="tel" name="telefono" id="telefono" placeholder="Teléfono / WhatsApp" required>
-        </div>
-        <div class="form-group">
-            <select name="tipo_ingreso" id="tipo-ingreso" required>
-                <option value="" disabled selected>Seleccioná tu condición</option>
-                <option value="Monotributista">Monotributista</option>
-                <option value="Relación de dependencia">Relación de dependencia</option>
-                <option value="Particular / Autónomo">Particular / Particular autónomo</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <textarea name="observaciones" id="observaciones" rows="4" placeholder="Aclaraciones, grupo familiar o consultas adicionales"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar Consulta</button>
-    </form>
-</section>  
+    <!-- Sección Formulario de Contacto Secundario -->
+    <section id="contacto" class="contacto container js-scroll">
+        <h2 class="section-title">Solicitá tu Cotización Personalizada</h2>
+        
+        <form id="contact-form" class="form" action="https://formspree.io/f/xrpzdkrg" method="POST">
+            <div class="form-group">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" name="telefono" id="telefono" placeholder="Teléfono / WhatsApp" required>
+            </div>
+            <div class="form-group">
+                <select name="tipo_ingreso" id="tipo-ingreso" required>
+                    <option value="" disabled selected>Seleccioná tu condición</option>
+                    <option value="Monotributista">Monotributista</option>
+                    <option value="Relación de dependencia">Relación de dependencia</option>
+                    <option value="Particular / Autónomo">Particular / Particular autónomo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea name="observaciones" id="observaciones" rows="4" placeholder="Aclaraciones, grupo familiar o consultas adicionales"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Consulta</button>
+        </form>
+    </section>   
 
     <!-- Botón Flotante de WhatsApp -->
     <a href="https://wa.me/5491137981939?text=Hola,%20quiero%20cotizar%20un%20plan%20de%20salud" class="whatsapp-float" target="_blank" aria-label="Contacto por WhatsApp">
